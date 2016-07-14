@@ -8,9 +8,8 @@ def crp(alpha,n):
     for i in range(n):
         if(i==0): #1人目だったら0番目のテーブルに着席
             s.append(0)
-            print i,"sit 0"
+#            print i,"sit 0"
             table.setdefault(0,1)
-            print i,0
             continue
         
         else:
@@ -19,24 +18,24 @@ def crp(alpha,n):
             #新規テーブルの着席確率
             new_p = float(alpha)/(i-1+alpha) 
             sum += new_p
-            print i,len(table),new_p,sum
+ #           print i,len(table),new_p,sum
             if(sum>=prob): 
                 s.append(len(table))
                 table.setdefault(len(table),1)
-                print i,"sit",len(table)-1,"(new!)"
+  #              print i,"sit",len(table)-1,"(new!)"
                 continue
 
             #既存テーブルへの着席確率を見ていく
             for t in table.keys(): 
                 sit_p = float(table[t])/(i-1+alpha)
                 sum += sit_p
-                print i,t,sit_p,sum
+   #             print i,t,sit_p,sum
                 if(sum>=prob):
                     s.append(t)
                     table[t] += 1
                     print i,"sit",t
                     break
-
+                
     return s,table
                 
     
