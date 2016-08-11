@@ -1,7 +1,5 @@
 #coding=utf:8
-
 import random
-
 
 def crp(alpha,n): #alpha:パラメータ n:全体の人数
     s=[] #各人が座るテーブル番号のリスト
@@ -36,5 +34,3 @@ def crp(alpha,n): #alpha:パラメータ n:全体の人数
                     break
                 
     return s,table
-                
-    
