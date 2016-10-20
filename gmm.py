@@ -1,3 +1,7 @@
+#!coding:utf-8
+# ガウス混合モデル
+# ４山混合モデルのシミュレート
+
 import matplotlib.pyplot as plt
 import numpy as np
 

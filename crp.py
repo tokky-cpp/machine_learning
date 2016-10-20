@@ -1,8 +1,13 @@
-#coding=utf:8
+#!coding:utf-8
+# CRP(中華料理店過程)に基づいてクラス数未定のクラスタリングのための事前分布を決定する。
+
 
 import random
 
-def crp(alpha,n):
+alpha = 1
+n = 100
+
+def crp(alpha=alpha,n=n):
     s=[]
     table={}
     for i in range(n):
